@@ -1,0 +1,16 @@
+{%extends 'posts/post_base.html'%}
+
+{%block prepost%}
+    <div class="col-md-4">
+        <h2>{{user.username}}</h2>
+    </div>
+{%endblock%}
+
+{%block postcontent%}
+    <div class="col-md-8">
+        <!--게시물 하나씩 출력-->
+        {%for post in post_list%}
+            {%include 'posts/_post.html'%}
+        {%endfor%}
+    </div>
+{%endblock%}

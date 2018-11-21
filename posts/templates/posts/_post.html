@@ -1,0 +1,10 @@
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{post.title}}</h5>
+    <p class="card-text">{{post.created_at}}</p>
+    <p class="card-text">
+      <a href="{%url 'posts:userposts' username=post.user.username%}">{{post.user.username}}</a>
+    </p>
+    <a href="{%url 'posts:detail' username=post.user.username pk=post.pk%}" class="btn btn-primary">자세히</a>
+  </div>
+</div>
